@@ -1,0 +1,12 @@
+.location_container {
+    @include flexcenter;
+    width: 100%;
+    background-color: #eaeaea ;
+    box-shadow: inset 0px 6px 10px -12px black;
+    margin: 10px 0 0 0;
+    height: 50px;
+    & > *{
+        margin: 0 15px 0 0;
+        font-size: 20px;
+    }
+}

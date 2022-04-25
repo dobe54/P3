@@ -1,0 +1,23 @@
+.logo {
+    width: 100%;
+    @include flexcenter;
+    &_img {
+        @include flexcenter;
+        img {
+            width: 250px;
+            padding: 10px 0 0 0;
+            
+        }
+    }
+
+}
+@include mobile-only{
+    .logo{
+        img {
+            width: 140px;
+        }
+    }
+
+}
+    
+
