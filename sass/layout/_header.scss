@@ -4,17 +4,19 @@
     &_img {
         @include flexcenter;
         img {
-            width: 250px;
+            width: 270px;
             padding: 10px 0 0 0;
             
         }
     }
 
 }
-@include mobile-only{
+@media (max-width: 768px){
     .logo{
+       
         img {
-            width: 140px;
+            margin-top: 10px;
+            width: 160px;
         }
     }
 

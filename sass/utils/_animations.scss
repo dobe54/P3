@@ -1,0 +1,12 @@
+@keyframes heart_animation {
+    from{
+        transform: translateY(200px);
+        color: $color_primary;
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        color: $color_primary;
+        opacity: 1;
+    }
+}
