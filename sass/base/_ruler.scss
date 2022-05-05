@@ -2,4 +2,10 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
   }
-  
+  a {
+    text-decoration: none;
+  }
+  li {
+    text-decoration: none;
+    list-style-type: none;
+  }
