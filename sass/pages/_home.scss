@@ -1,14 +1,14 @@
-/*.loader_container {
+
+.loader_container {
   position: fixed;
   height: 100%;
   width: 100%;
   background-color: white;
-  opacity: 0.7;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation-delay: 1.8s;
+  animation-delay: 1.7s;
   animation-fill-mode: both;
   animation-name: time;
 }
@@ -34,8 +34,8 @@
     }
    
   }
-}
-*/
+} 
+
 .location_container {
   @include flexcenter;
   width: 100%;
@@ -47,7 +47,7 @@
     margin: 0 15px 0 0;
     font-size: 18px;
   }
-}
+} 
 
 .explorer_container {
   background-color: #f6f6f6;
@@ -78,7 +78,10 @@
 .function_container {
   h3 {
     @include title_home;
-    margin-left: 400px;
+    margin: 20px auto 0 400px;
+    
+      
+    
   }
 }
 .function_box {
@@ -97,10 +100,12 @@
     &:hover {
       background-color: #f5edff;
       cursor: default;
+    
       i {
         color: $color_primary;
       }
     }
+    
     &_number {
       position: relative;
       left: -20px;
@@ -128,11 +133,11 @@
 .restaurants_container {
   background-color: #f6f6f6;
   margin-top: 50px;
-  padding-bottom: 35px;
+  margin-bottom: -100px;
+  padding-bottom: 50px;
   h3 {
     @include title_home;
-    text-align: center;
-    padding-top: 20px;
+    margin: 20px auto 20px 250px;
   }
 }
 .restaurants_box {
@@ -147,6 +152,8 @@
   background-color: white;
   border-radius: 20px;
   width: 650px;
+  box-shadow: $shadow;
+  color: black;
 }
 .restaurants_container {
   h3 {
@@ -164,7 +171,8 @@
     width: 100%;
     height: 180px;
 
-    object-fit: cover;
+   object-fit: cover;
+    
     border-radius: 20px 20px 0 0;
   }
   &_new {
@@ -205,6 +213,16 @@
 }
 
 
+.restaurants_card_description_heart {
+  font-size: 27px;
+  margin-right: 16px;
+  .far {
+      @include heartAnimation;
+      font-weight: lighter;
+  }    
+}
+
+      
 /* MODE MOBILE */
 @media (max-width: 1180px) {
   .location_container {
@@ -229,6 +247,12 @@
 
   .function_box {
     margin: 30px auto 5px auto;
+  }
+  .restaurants_container {
+    h3 {
+      margin: 30px 0 20px 10px;
+      text-align: start;
+    }
   }
   .restaurants_box {
     row-gap: 0;

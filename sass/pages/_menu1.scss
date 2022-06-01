@@ -1,0 +1,179 @@
+
+.menu_img {
+    img {
+       @include header_menu_img;
+    }
+}
+
+
+.menu_container {
+    z-index: 1;
+    position: relative;
+    background-color: $back_color_menu;
+    border-radius: 35px 35px 0 0;
+    max-width: 1180px;
+    width: 100%;
+    margin: -50px auto -100px auto;
+    padding-bottom: 50px;
+}
+
+.menu_header_description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px 0 16px;
+    &_tittle {
+        font-size: 18px;
+        h2 {
+            font-weight: 100;
+        }
+        
+    
+    }
+    &_heart {
+        font-size: 26px;
+        .far {
+            @include heartAnimation;
+    
+        }    
+        
+    }
+}
+.menu_general {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 16px;
+}
+.menu {
+    padding: 0 16px 0 16px;
+    max-width: 100%;
+    }
+    
+
+
+ .menu_category {
+     &_tittle {
+        font-size: 17px;
+        font-weight: 300;
+        margin-top: 15px;
+        p {
+            margin: 0;
+        }
+
+     }
+     &_tittle_line {
+         background-color: $color_tertiary;
+         height: 3px;
+         width: 40px;
+         margin-top: 5px;
+     }
+ }
+
+ .menu_box
+ {
+     position: relative;
+     background-color: white;
+     border-radius: 12px;
+     margin: 10px 0 15px 0;
+     display: flex;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     overflow: hidden;
+     cursor: pointer;
+     animation: fadeInCards 1s ease-in-out ;
+    transition: 0.2s ease-in-out;
+    &:hover .menu_box_check {
+        transform: translateX(-100%);
+        display: flex;
+    }
+    &:hover i {
+        animation: checkRotate 0.8s ease-in-out;
+    }
+  
+     &_tittle {
+         padding: 10px;
+        h4 {
+            margin: 0;
+            padding-bottom: 6px;
+            font-size: 17px;
+        }
+        p {
+            margin: 0;
+            font-weight: 300;
+            font-size: 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 260px;
+        }
+
+     }
+     &_price {
+         
+         p {
+             margin-top: 35px;
+             margin-right: 15px;
+             margin-left: 30px;
+             font-size: 15px;
+             font-weight: bold;
+            
+         }
+     }
+    
+        .menu_box_check {
+            position: absolute;
+            bottom: 0;
+            right: -83px;
+            width: 80px;
+            height: 100%;
+            border-radius: 100px;
+            @include flexcenter;
+            background-color: $color_tertiary;
+            border-radius: 0 16px 16px 0;
+            transition: 0.4s ease-in-out;
+            animation: apparition 0.4s ease-in-out;
+            i {
+                font-size: 16px;
+                color: $color_tertiary;
+                background-color: white;
+                border-radius: 100px;
+                padding: 5px;
+                
+            }
+        }
+    }
+  
+
+ .menu_card_plats {
+    animation: fadeInCards 1.4s ease-in-out ;
+ }
+ .menu_card_desserts {
+    animation: fadeInCards 1.4s ease-in-out ;
+ }
+ .btn_cmd {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 20px;
+    
+     
+
+ }
+ .commande_btn {
+     @include style_btn;
+     padding: 15px 40px 15px 40px ;
+ }
+
+ @media (max-width: 1180px) {
+     .menu_general {
+         display: grid;
+         grid-template-columns: none;
+         
+     }
+     .menu_img {
+        img {
+           height: 272px;
+        }
+    }
+}
+ 
+     

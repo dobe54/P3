@@ -3,12 +3,15 @@ footer {
     background-color: #353535;
     height: 170px;
 }
-.footer_container {
-    margin-top: -18px;
-    
-
+    .footer_container {
+       margin-top: 100px;
+       
+    }
+.footer_box {
+    margin-left: 340px;
     
 }
+
 .footer_title {
     color: white;
     h2 {
@@ -38,5 +41,15 @@ footer {
     i {
         font-size: 12px;
         padding-right: 10px;
+    }
+}
+@media (max-width: 1180px) {
+    .footer_container {
+        max-width: 1180px;
+        margin: 100px auto;
+    }
+    .footer_box {
+        margin-left: 0px;
+        
     }
 }

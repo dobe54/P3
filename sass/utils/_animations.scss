@@ -1,15 +1,3 @@
-@keyframes heart_animation {
-    from{
-        transform: translateY(200px);
-        color: $color_primary;
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        color: $color_primary;
-        opacity: 1;
-    }
-}
 
 @keyframes loader {
 
@@ -36,7 +24,7 @@
    
     100% {
         opacity: 0;
-        z-index: -1;
+        display: none;
     }
 }
 
@@ -47,6 +35,59 @@
 
     to {
         opacity: 0;
+        z-index: -1;
     }
 }
 
+@keyframes fullHeart {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        transform-origin: left;
+        opacity: 0.25;
+    }
+    50% {     
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInCards {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes checkRotate {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+@keyframes apparition {
+    0%{
+        display: none;
+        z-index: 0;
+        opacity: 0;
+        
+      }
+    
+      100% {
+          opacity: 1;
+
+        
+      }
+}
