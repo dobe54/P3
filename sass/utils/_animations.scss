@@ -91,3 +91,23 @@
         
       }
 }
+
+@keyframes menuBoxTitleToggle {
+    0% {
+        width: 90%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes menuBoxPriceToggle {
+    0% {
+        width: 10%;
+    }
+
+    100% {
+        width: 30%;
+    }
+}

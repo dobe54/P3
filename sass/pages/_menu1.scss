@@ -83,14 +83,30 @@
     transition: 0.2s ease-in-out;
     &:hover .menu_box_check {
         transform: translateX(-100%);
+        transition-duration: 0.8s;
         display: flex;
     }
     &:hover i {
         animation: checkRotate 0.8s ease-in-out;
     }
+    &:hover {
+        .menu_box_tittle {
+            animation: menuBoxTitleToggle 0.8s ease-in-out;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 70%;
+        }
+        
+        .menu_box_price {
+            animation: menuBoxPriceToggle 0.8s ease-in-out;
+            width: 30%;
+        }
+    }
   
      &_tittle {
          padding: 10px;
+         width: 90%;
         h4 {
             margin: 0;
             padding-bottom: 6px;
@@ -103,39 +119,34 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            width: 260px;
         }
 
      }
      &_price {
-         
+        width: 10%;
+        display: flex;
+        align-items: center;
          p {
-             margin-top: 35px;
-             margin-right: 15px;
-             margin-left: 30px;
              font-size: 15px;
              font-weight: bold;
-            
+             padding-right: 10px;
          }
      }
     
         .menu_box_check {
             position: absolute;
-            bottom: 0;
-            right: -83px;
-            width: 80px;
+            right: -20%;
+            width: 20%;
             height: 100%;
-            border-radius: 100px;
             @include flexcenter;
             background-color: $color_tertiary;
-            border-radius: 0 16px 16px 0;
             transition: 0.4s ease-in-out;
             animation: apparition 0.4s ease-in-out;
             i {
                 font-size: 16px;
                 color: $color_tertiary;
                 background-color: white;
-                border-radius: 100px;
+                border-radius: 100%;
                 padding: 5px;
                 
             }
@@ -162,7 +173,6 @@
      @include style_btn;
      padding: 15px 40px 15px 40px ;
  }
-
  @media (max-width: 1180px) {
      .menu_general {
          display: grid;
