@@ -174,6 +174,42 @@
   }
 }
 
+@-webkit-keyframes menuBoxTitleToggle {
+  0% {
+    width: 90%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes menuBoxTitleToggle {
+  0% {
+    width: 90%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes menuBoxPriceToggle {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes menuBoxPriceToggle {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -481,9 +517,17 @@ footer {
 }
 
 .function_container h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 24px;
   font-weight: 1000;
-  margin: 20px auto 0 400px;
 }
 
 .function_box {
@@ -694,6 +738,12 @@ footer {
     font-size: 16px;
   }
   .function_container h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin: 40px 0 0 20px;
     text-align: start;
   }
@@ -801,7 +851,6 @@ footer {
 .menu_general {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -webkit-column-gap: 16px;
           column-gap: 16px;
@@ -850,24 +899,47 @@ footer {
 .menu_box:hover .menu_box_check {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .menu_box:hover i {
-  -webkit-animation: checkRotate 0.8s ease-in-out;
-          animation: checkRotate 0.8s ease-in-out;
+  -webkit-animation: checkRotate 0.5s ease-in-out;
+          animation: checkRotate 0.5s ease-in-out;
+}
+
+.menu_box:hover .menu_box_tittle {
+  -webkit-animation: menuBoxTitleToggle 0.5s ease-in-out;
+          animation: menuBoxTitleToggle 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 70%;
+}
+
+.menu_box:hover .menu_box_price {
+  -webkit-animation: menuBoxPriceToggle 0.5s ease-in-out;
+          animation: menuBoxPriceToggle 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 30%;
 }
 
 .menu_box_tittle {
   padding: 10px;
+  width: 90%;
 }
 
 .menu_box_tittle h4 {
   margin: 0;
   padding-bottom: 6px;
   font-size: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu_box_tittle p {
@@ -877,24 +949,29 @@ footer {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 260px;
+}
+
+.menu_box_price {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu_box_price p {
-  margin-top: 35px;
-  margin-right: 15px;
-  margin-left: 30px;
   font-size: 15px;
   font-weight: bold;
+  padding-right: 10px;
 }
 
 .menu_box .menu_box_check {
   position: absolute;
-  bottom: 0;
-  right: -83px;
-  width: 80px;
+  right: -20%;
+  width: 20%;
   height: 100%;
-  border-radius: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -905,7 +982,6 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #99e2d0;
-  border-radius: 0 16px 16px 0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   -webkit-animation: apparition 0.4s ease-in-out;
@@ -916,7 +992,7 @@ footer {
   font-size: 16px;
   color: #99e2d0;
   background-color: white;
-  border-radius: 100px;
+  border-radius: 100%;
   padding: 5px;
 }
 

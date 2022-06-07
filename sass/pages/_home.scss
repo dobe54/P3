@@ -76,12 +76,11 @@
 }
 
 .function_container {
+  
   h3 {
+    @include flexcenter;
     @include title_home;
-    margin: 20px auto 0 400px;
-    
-      
-    
+  
   }
 }
 .function_box {
@@ -232,6 +231,8 @@
   }
   .function_container {
     h3 {
+      display: flex;
+      justify-content: flex-start;
       margin: 40px 0 0 20px;
       text-align: start;
     }
