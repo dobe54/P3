@@ -223,7 +223,7 @@
 
       
 /* MODE MOBILE */
-@media (max-width: 850px) {
+@media (max-width: 450px) {
   .location_container {
     & > * {
       font-size: 16px;
@@ -262,5 +262,20 @@
   }
   .restaurants_card_img_new {
     left: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .function_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_card {
+      margin: 0px 10px 30px 20px;
+    }
+  }
+  .function_box {
+    margin: 30px auto 5px auto;
   }
 }
