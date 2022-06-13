@@ -741,7 +741,7 @@ footer {
 }
 
 /* MODE MOBILE */
-@media (max-width: 1180px) {
+@media (max-width: 850px) {
   .location_container > * {
     font-size: 16px;
   }
@@ -774,7 +774,13 @@ footer {
     margin: 30px auto 5px auto;
   }
   .restaurants_container h3 {
-    margin: 30px 0 20px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 40px 0 20px 20px;
     text-align: start;
   }
   .restaurants_box {
@@ -859,7 +865,6 @@ footer {
 .menu_general {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -webkit-column-gap: 16px;
           column-gap: 16px;
