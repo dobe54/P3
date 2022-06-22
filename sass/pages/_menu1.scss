@@ -30,6 +30,7 @@
         
     
     }
+    /* Animation coeur */
     &_heart {
         font-size: 26px;
         .far {
@@ -68,7 +69,7 @@
          margin-top: 5px;
      }
  }
-
+/* Animation rotation menu check */
  .menu_box
  {
      position: relative;
@@ -81,11 +82,7 @@
      overflow: hidden;
      cursor: pointer;
      animation: fadeInCards 1s ease-in-out ;
-    transition: 0.2s ease-in-out;
-    &:hover .menu_box_check {
-        transform: translateX(-100%);
-        transition-duration: 0.5s;
-        display: flex;
+     transition: 0.2s ease-in-out;
     }
     &:hover i {
         animation: checkRotate 0.5s ease-in-out;
@@ -141,7 +138,7 @@
             padding-right: 10px;
          }
      }
-    
+    /* Animation menu check */
         .menu_box_check {
             position: absolute;
             right: -20%;
@@ -160,7 +157,7 @@
                 
             }
         }
-    }
+    
   
 
  .menu_card_plats {
@@ -182,7 +179,7 @@
      @include style_btn;
      padding: 15px 40px 15px 40px ;
  }
-
+/* MOBILE */
  @media (max-width: 400px) {
      .menu_general {
          display: grid;
@@ -195,7 +192,7 @@
     }
     
 }
-
+/* Tablette */
 @media (min-width: 400px) and (max-width: 1190px) {
     .menu_general {
         display: grid;

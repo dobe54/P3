@@ -1,4 +1,4 @@
-
+/* Animation loader arrière plan */
 .loader_container {
   position: fixed;
   height: 100%;
@@ -12,7 +12,7 @@
   animation-fill-mode: both;
   animation-name: time;
 }
-
+/* Animation loader élément */
 .loader {
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@
    
   }
 } 
-
+/* Localisation */
 .location_container {
   @include flexcenter;
   width: 100%;
@@ -83,6 +83,7 @@
   
   }
 }
+/* Bouton fonctionnement */
 .function_box {
   display: flex;
   justify-content: center;
@@ -147,6 +148,7 @@
   row-gap: 40px;
 }
 
+/* Carte Restaurant*/
 .restaurants_card {
   background-color: white;
   border-radius: 20px;
@@ -211,7 +213,7 @@
   }
 }
 
-
+/* Animation coeur */
 .restaurants_card_description_heart {
   font-size: 27px;
   margin-right: 16px;
@@ -222,7 +224,7 @@
 }
 
       
-/* MODE MOBILE */
+/* MOBILE */
 @media (max-width: 450px) {
   .location_container {
     & > * {
@@ -264,7 +266,7 @@
     left: 75%;
   }
 }
-
+/* Tablette */
 @media (max-width: 850px) {
 
   .function_box {

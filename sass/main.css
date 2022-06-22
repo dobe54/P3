@@ -1,3 +1,4 @@
+/* Animation loader opacité */
 @-webkit-keyframes loader {
   0% {
     opacity: 1;
@@ -43,7 +44,7 @@
     display: none;
   }
 }
-
+/* Animation loader arrière plan */
 @-webkit-keyframes time {
   from {
     opacity: 0.7;
@@ -63,7 +64,7 @@
     z-index: -1;
   }
 }
-
+/* Animation coeur */
 @-webkit-keyframes fullHeart {
   0% {
     opacity: 0;
@@ -129,7 +130,7 @@
             transform: translateY(0);
   }
 }
-
+/* Animation rotation check menu */
 @-webkit-keyframes checkRotate {
   0% {
     -webkit-transform: rotate(-180deg);
@@ -151,7 +152,7 @@
             transform: rotate(0);
   }
 }
-
+/* Animation apparition check */
 @-webkit-keyframes apparition {
   0% {
     display: none;
@@ -173,7 +174,7 @@
     opacity: 1;
   }
 }
-
+/* Animation titre menu check */
 @-webkit-keyframes menuBoxTitleToggle {
   0% {
     width: 90%;
@@ -191,7 +192,7 @@
     width: 70%;
   }
 }
-
+/* Animation prix menu check */
 @-webkit-keyframes menuBoxPriceToggle {
   0% {
     width: 10%;
@@ -262,7 +263,7 @@ h1, h2 {
   width: 270px;
   padding: 10px 0 0 0;
 }
-
+/* Mobile */
 @media (max-width: 768px) {
   .logo img {
     margin-top: 10px;
@@ -308,7 +309,7 @@ h1, h2 {
 .header_menu_logo img {
   width: 270px;
 }
-
+/* Tablette */
 @media (max-width: 1180px) {
   .header_menu {
     margin-top: 20px;
@@ -370,7 +371,7 @@ footer {
   font-size: 12px;
   padding-right: 10px;
 }
-
+/* Tablette */
 @media (max-width: 1180px) {
   .footer_container {
     max-width: 1180px;
@@ -380,7 +381,7 @@ footer {
     margin-left: 0px;
   }
 }
-
+/* Animation loader arrière plan */
 .loader_container {
   position: fixed;
   height: 100%;
@@ -421,7 +422,7 @@ footer {
   -webkit-animation: loader 500ms infinite alternate;
           animation: loader 500ms infinite alternate;
 }
-
+/* Animation loader élément */
 .loader_box--1 {
   -webkit-animation-delay: 125ms;
           animation-delay: 125ms;
@@ -718,7 +719,7 @@ footer {
   position: relative;
   font-weight: lighter;
 }
-
+/* Animation coeur */
 .restaurants_card_description_heart .far::after {
   position: absolute;
   left: 0%;
@@ -790,7 +791,7 @@ footer {
     left: 75%;
   }
 }
-
+/* MOBILE */
 @media (max-width: 850px) {
   .function_box {
     display: -webkit-box;
@@ -861,7 +862,7 @@ footer {
 .menu_header_description_heart .far {
   position: relative;
 }
-
+/* Animation coeur */
 .menu_header_description_heart .far::after {
   position: absolute;
   left: 0%;
@@ -1003,7 +1004,7 @@ footer {
   font-weight: bold;
   padding-right: 10px;
 }
-
+/* Animation menu check */
 .menu_box .menu_box_check {
   position: absolute;
   right: -20%;
